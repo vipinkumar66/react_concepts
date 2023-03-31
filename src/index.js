@@ -23,7 +23,7 @@ const Book = () =>{
     )
 }
 
-const Image = () => <img src='https://images-na.ssl-images-amazon.com/images/I/81fyoFoaxlL._AC_UL600_SR600,400_.jpg'alt='Dog Man'/>
+const Image = () => <img src='./assets/dogman.jpg'alt='Dog Man'/>
 const Title = () => {
     return(
         <h2>Dog Man</h2>
