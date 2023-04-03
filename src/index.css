@@ -40,3 +40,60 @@ body{
     margin-top: 1rem;
     font-size: 1rem;
 }
+
+.submitform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+
+}
+
+.sectionform {
+    display: flex;
+    align-items: center;
+  }
+
+.sectionform input{
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.sectionform button{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+}
+
+@media screen and (max-width:400px) {
+    .sectionform{
+        display: flex;
+        flex-direction: column;
+    }
+    .sectionform input{
+        font-size: 0.5rem;
+        margin-bottom: 10px;
+    }
+    .sectionform button{
+        padding: 1rem 2rem;
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .sectionform{
+        display: flex;
+        flex-direction: column;
+    }
+    .sectionform input{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .sectionform button{
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+}
