@@ -26,9 +26,16 @@ const books =[
 ]
 
 const BookList = () => {
+  const [searchItems, setSearchItems] = useState([])
+  const handleSearch = (inputValue) =>{
+    const filteredResult = books.filter((book) =>
+    book.title.toLowerCase().includes(inputValue.toLowerCase()));
+    setSearchItems(filteredResult)
+    console.log(searchItems)
+  }
   return (
     <div>
-      <FormComponent/>
+      <FormComponent handleSearch = {handleSearch}/>
 
       <section className='booklist'>
         {books.map((book) => {
@@ -46,12 +53,13 @@ const BookList = () => {
    )
 }
 
-const FormComponent = () =>{
+const FormComponent = (props) =>{
   const [value, setValue] = useState('')
 
   const handleDefault = (event) =>{
     event.preventDefault();
     console.log(`Form submitted with the ${value}`)
+    props.handleSearch(value)
 
   }
 
